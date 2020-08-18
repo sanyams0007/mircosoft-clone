@@ -1,0 +1,338 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.border{
+    border: 1px solid black;
+}
+
+body{
+    font-family: 'Segoe UI', Arial;
+    -web-font-smoothing:antialiased;
+    background-color: rgb(245, 245, 245);
+    color: black;
+    font-size: 13px;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+a{
+    text-decoration: none;
+    color: #262626;
+}
+
+a > i{
+    padding-left: .5rem;
+}
+
+ul {
+    list-style: none;
+}
+
+.container{
+    width: 90%;
+    margin:auto;
+    max-width: 1500px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 1rem;
+}
+
+.nav .logo{
+    max-height: 25px;
+    width: 110px;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav ul li{
+    padding: 0 10px;
+}
+
+.nav ul.nav-left-list {
+    flex: 1;
+    margin-left: 20px;
+}
+
+/* .nav ul.nav-right-list li a{
+padding: px;
+} */
+
+.nav ul li a:hover{
+    border-bottom: 2px solid #262626;
+}
+
+.showcase{
+    position: relative;
+    height: 75vh;
+    width: 100%;
+    background: skyblue url(../img/showcase.webp);
+    background-repeat: no-repeat;
+    background-position: 75% 0;
+    /* background: center center; */
+    background-size: cover;
+}
+
+.showcase .showcase-content{
+    position: absolute;
+    top: 35%;
+    left: 8%;
+}
+
+.showcase .showcase-content h1,p{
+    margin-bottom: 1rem;
+}
+
+.btn{
+    text-align: center;
+    display: inline-block;
+    background: #262626;
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+
+.btn-blue{
+    text-align: center;
+    display: inline-block;
+    background: transparent ;
+    color: steelblue;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+.tab-panel{
+    margin: 60px auto;
+}
+
+.tab-panel .tabs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.tab-panel .tabs .tab{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:0 1.5rem;
+}
+
+.tab-panel .tabs .tab a{
+    margin-left: .5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.tab-panel .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    /* grid-template-columns: repeat(4,1fr); */
+    grid-gap: 30px;
+}
+
+.tab-panel .cards img{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.tab-panel .cards .card{
+    font-size: 14px;
+}
+
+.cards .card .card-content a:hover{
+    border-bottom: 2px solid steelblue;
+}
+
+.game-panel{
+    position: relative;
+    height: 500px;
+    background: url(../img/gambar.webp);
+    background-position: 90% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    width: 40%;
+    position: absolute;
+    top: 30%;
+    left: 7%;
+}
+
+.game-panel p{
+    margin: 1rem auto 2rem;
+}
+
+.tab-panel > h2{
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 3rem;
+}
+
+.social p{
+    font-size: 15px;
+}
+
+.social * {
+    margin-right: 10px;
+}
+
+.footer {
+    background: rgb(236, 236, 236);
+    width: 100%;
+}
+
+.footer h3{
+    color: rgb(65, 65, 65);
+    font-weight: 600;
+}
+
+.footer a{
+    font-size: 10px;
+}
+
+.footer a:hover{
+    text-decoration: underline;
+}
+
+.footer .footer-cols{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: 2rem;
+    justify-content: center;
+}
+
+.footer .footer-cols ul li {
+    padding: .5rem 0;
+}
+
+.footer .footer-cols ul li a {
+    color: grey;
+}
+
+.footer .main-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.footer .main-footer a{
+    padding-left: 20px;
+}
+.footer .main-footer .globe{
+    padding-left: 0;
+}
+
+.globe {
+    flex: 1;
+}
+
+@media(max-width:1280px){
+
+}
+
+
+@media(max-width:960px){
+    .nav ul.nav-left-list{
+        justify-content: center;
+    }
+    .nav ul.nav-right-list {
+        display: none;
+    }
+
+    .showcase{
+        height: 650px;
+        
+    }
+    .tab-panel .tabs{
+        justify-content: space-around;
+    }
+
+    .tab-panel .cards {
+         grid-template-columns: repeat(2,1fr);
+    }
+
+    .game-panel h1{
+        font-size: 2rem;
+    }
+
+    .content{
+        width: 25%;
+    }
+
+    .footer .footer-cols {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media(max-width:540px){
+
+    .nav ul.nav-left-list {
+        display: none;
+    }
+
+    .tab-panel .tabs{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .tab-panel .tabs .tab{
+        padding-bottom: 1rem;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .showcase .showcase-content h1{
+        font-size: 2rem;
+    }
+
+    .showcase{ 
+        height: 70vh;
+        background-size: cover;
+    }/*
+    .showcase .showcase-content{
+    top: 35%;
+    left: 8%;
+    } */
+
+    /* .na {
+        padding: 20px;
+    } */
+
+    .tab-panel .cards {
+        grid-row-gap: 50px;
+        grid-template-columns: repeat(1,1fr);
+   }
+   .game-panel{
+       height: 50vh;
+       background-size:cover ;
+   }
+
+    .footer .footer-cols {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
